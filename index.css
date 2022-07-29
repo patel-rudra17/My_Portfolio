@@ -1,0 +1,614 @@
+:root {
+    --transition: all 0.7s ease;
+    --orange: #F66B0E;
+    --dark: #292826;
+  }
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Playfair Display", serif;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    line-height: 1.6;
+    background-color: #333;
+  }
+  .btn {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 140px;
+    display: block;
+    margin: 15px auto;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  .btn:hover {
+    opacity: 0.85;
+  }
+  .flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    padding: 8px 0;
+  }
+  img {
+    width: 100%;
+    display: block;
+  }
+  @media (max-width: 500px) {
+    body {
+      font-size: 14px;
+    }
+  }
+  
+  /* ----header---- */
+  .header {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)),
+      url(https://c4.wallpaperflare.com/wallpaper/182/581/309/digital-art-tile-dark-cube-wallpaper-preview.jpg)
+        center/cover no-repeat;
+    min-height: 100vh;
+    color: #fff;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+  }
+  .head-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .head-top span {
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: var(--transition);
+    font-size: 30px;
+  }
+  .head-top span:hover {
+    color: var(--orange);
+  }
+ 
+.home-content{
+  text-align: center;
+  font-size: 50px;
+  font-weight: 500;
+  justify-content: center;
+  margin-top: 100px;
+}
+.typing{
+  color: #D6E5FA;
+  font-weight: 500;
+}
+@media (max-width: 500px){
+  .home-content{
+    font-size: 30px;
+    font-weight: 30px;
+  }
+  .typing{
+    font-weight: 30px;
+  }
+}
+
+
+
+  .head-btn {
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: bold;
+    border: 3px solid #fff;
+    background: transparent;
+    padding: 13px 20px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  .head-btn:hover {
+    background: transparent;
+  }
+  @media (max-width: 500px) {
+    .head-btn {
+      font-size: 17px;
+    }
+    .head-bottom h2 {
+      font-size: 28px;
+    }
+    .head-bottom p {
+      font-size: 17px;
+      margin: 20px auto;
+    }
+  }
+  
+  /* ----side nav---- */
+  .sidenav {
+    background: var(--dark);
+    color: #fff;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -100%;
+    /* right: 0; */
+    width: 300px;
+    padding: 20px;
+    transition: var(--transition);
+    z-index: 10;
+  }
+  
+  /* ******* */
+  .sidenav.show {
+    right: 0;
+  }
+  /* ******* */
+  .cancel-btn {
+    position: absolute;
+    right: 25px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  .cancel-btn:hover {
+    opacity: 0.7;
+  }
+  .navbar {
+    margin-top: 50px;
+    list-style: none;
+    padding: 17px;
+  }
+  .navbar li a {
+    color: #fff;
+    text-transform: capitalize;
+    text-decoration: none;
+    padding: 15px 0;
+    display: block;
+    border-bottom: 0.5px solid rgba(249, 211, 66, 0.3);
+    opacity: 0.8;
+    letter-spacing: 1.5px;
+    transition: var(--transition);
+  }
+  .navbar li a:hover {
+    padding-left: 12px;
+  }
+  .sign-up,
+  .log-in {
+    background: var(--orange);
+    color: #fff;
+  }
+  @media (max-width: 400px) {
+    .sidenav {
+      width: 100vw;
+    }
+  }
+  
+
+/* --------- about ---------- */
+
+.text-center{
+  padding: 3rem;
+  text-align: center;
+}
+.tital{
+  font-size: 2rem;
+  text-align: center;
+  display: block;
+  padding-bottom: 2rem;
+  color: #f7f7f7;
+  font-size: 40px;
+}
+.tital:hover{
+    text-decoration: underline 5px solid gray;
+  }
+
+.under{
+  margin-top: 10px;
+  text-decoration: underline 2px solid red;
+}
+.para{
+  font-size: 2rem;
+  text-align: center;
+  padding-bottom: 30px;
+  color: #fff;
+}
+.about-info img{
+  width: 80%;
+  border-radius: 50%;
+}
+.bio{
+  background-color:rgba(90, 90, 90, 0.5);
+  color: #fff;
+  text-align: left;
+}
+.bio h4{
+font-size: 2rem;
+}
+.bio p{
+  font-size: 17px;
+}
+.about-btn{
+  margin: 20px 0;
+    font-size: 20px;
+    font-weight: bold;
+    border: 3px solid #fff;
+    padding: 13px 20px;
+    background: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: var(--transition);
+}
+.about-btn:hover{
+  background: transparent;
+}
+.about-btn a{
+  color: #fff;
+  text-decoration: none;
+}
+#about-1 .about-info {
+  display: grid;
+  grid-template-areas:
+    "bio-img bio bio"
+    "aw1 aw2 aw3";
+  grid-gap: 1.2rem;
+}
+
+#about-1 .bio-image {
+  grid-area: bio-img;
+}
+
+#about-1 .bio {
+  grid-area: bio;
+  border-left: 3px solid #ffbc00;
+  padding: 0.8rem;
+}
+
+#about-1 .award-1 {
+  grid-area: aw1;
+  color: #fff;
+  margin-top: 30px;
+}
+
+#about-1 .award-2 {
+  margin-top: 30px;
+  grid-area: aw2;
+  color: #fff;
+}
+
+#about-1 .award-3 {
+  margin-top: 30px;
+  grid-area: aw3;
+  color: #fff;
+}
+
+#about-1 .award-1 .fas,
+#about-1 .award-2 .fas,
+#about-1 .award-3 .fas {
+  color: #ffbc00;
+  margin: 1rem;
+}
+@media(min-width: 400px){
+  #about-1{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+/* ---------- skills ---------- */
+
+.inner{
+  padding-top: 20px;
+}
+.hed{
+  text-align: center;
+  letter-spacing: 3px;
+  color: #f7f7f7;
+  padding: 1rem;
+  position: relative;
+  font-size: 40px;
+  font-weight: bolder;
+  /* text-decoration: underline 5px solid gray; */
+}
+.hed:hover{
+  text-decoration: underline 5px solid gray;
+}
+.hed::after{
+  contain: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 100px;
+  background-color: var(--orange);
+  border-radius: 2px;
+}
+.contain{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-gap: 1rem;
+  padding: 1rem 80px;
+  font-size: 1.2rem;
+}
+.skill-box{
+  padding: 1rem;
+  color: #ddd;
+  cursor: pointer;
+}
+.skill-box:hover > .skill-title::after, .skill-box:hover > .skill-title::before{
+  width: 35px;
+}
+.skill-box:hover .img1{
+  transform: translateY(-10px);
+}
+.skill-title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+.skill-title::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  width: 0;
+  height: 4px;
+  border-radius: 2px 0 0 2px;
+  background-color: var(--orange);
+  transition: 0.5s;
+}
+.skill-title::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 4px;
+  border-radius: 0 2px 2px 0;
+  background-color: var(--orange);
+  transition: 0.5s;
+}
+.img1{
+  width: 90px;
+  height: 90px;
+  position: relative;
+  border-radius: 45px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+.img1::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 90px;
+  background: rgba(100, 100, 100, 0.5);
+  border-radius: 45px 0 0 45px;
+}
+.skill-title h3{
+  color: #fff;
+  margin-top: 0.5rem;
+}
+.skill-icon{
+  width: 50px;
+}
+
+@media screen and (max-width: 990px){
+  .contain{
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem 50px;
+  }
+}
+@media screen and (max-width: 650px){
+  .contain{
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ---------- Projects ---------- */
+
+.project{
+  text-align: center;
+  color: #f7f7f7;
+  font-size: 30px;
+  /* text-decoration: underline 3px solid var(--orange); */
+  letter-spacing: 3px;
+}
+.project:hover{
+  text-decoration: underline 5px solid gray;
+}
+
+.contant{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 30px;
+}
+.contant h1{
+  color: #fff;
+  font-size: 40px;
+  letter-spacing: 3px;
+  font-weight: bolder;
+  /* text-decoration: underline 3px solid var(--orange); */
+  padding-left: 30px;
+  padding-top: 30px;
+}
+.contant h1:hover{
+  text-decoration: underline 5px solid gray;
+}
+.img2 img{
+  padding-top: 20px;
+}
+.img2 a{
+  font-size: 20px;
+  font-weight: 20px;
+  color: #fff;
+}
+
+
+
+/* ---------- Footer ---------- */
+footer{
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 50px 100px;
+  background: #111;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  text-align: center;
+  justify-content: center;
+}
+footer .cantainer{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+footer .cantainer .sec{
+  margin-right: 30px;
+}
+footer .cantainer .sec.aboutus{
+  width: 40%;
+}
+footer .cantainer h2{
+  position: relative;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 15px;
+  letter-spacing: 3px;
+}
+footer .cantainer h2::before{
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 10;
+  width: 50px;
+  height: 2px;
+  background-color: #f00;
+}
+.name{
+  color: #999;
+  font-family:  'Great Vibes', cursive;
+  font-size: 50px;
+}
+.sci{
+  margin-top: 20px;
+  display: flex;
+}
+.sci li{
+  list-style-type: none;
+}
+.sci li a{
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.sci li a:hover{
+  background: #f00;
+}
+.sci li a .fa{
+  color: #fff;
+  font-size: 20px;
+}
+.quicklinks{
+  position: relative;
+  width: 25%;
+}
+.quicklinks ul li{
+  list-style: none;
+
+}
+.quicklinks ul li a{
+  color: #999;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: inline-block;
+  font-size: 20px;
+}
+.quicklinks ul li a:hover{
+  color: #fff;
+}
+.contact{
+  width: calc(35% - 60px);
+  margin-right: 0 !important;
+}
+.contact .info{
+  position: relative;
+}
+.contact .info li{
+  display: flex;
+  margin-bottom: 16px;
+}
+.contact .info li span:nth-child(1){
+  color: #fff;
+  font-size: 20px;
+  margin-right: 10px;
+}
+.contact .info li span{
+  color: #999;
+}
+.contact .info li a{
+  color: #999;
+  text-decoration: none;
+}
+.contact .info li a:hover{
+  color: #fff;
+}
+.copyright{
+  width: 100%;
+  background: #181818;
+  padding: 8px 100px;
+  text-align: center;
+  color: #999;
+}
+@media (max-width: 991px)
+{
+  footer{
+      padding: 40px;
+  }
+  footer .cantainer{
+      flex-direction: column;
+  }
+  footer .cantainer .sec{
+      margin-right: 0;
+      margin-bottom: 40px;
+  }
+  footer .cantainer .sec.aboutus, .quicklinks, .contact{
+      width: 100%;
+  }
+  .copyright{
+      pad: 8px 40px;
+  }
+
+}
